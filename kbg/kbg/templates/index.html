@@ -1,9 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title></title>
-</head>
-<body>
-	<h1>hello world</h1>
-</body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/jquery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/jquery/jquery-ui-1.8.2.custom.min.js"></script>
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/jquery/jquery.pagination.js"></script>
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/js/data.js"></script>
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/js/common.js"></script>
+		<script type="text/javascript" src="{{MEDIA_ROOT}}/javascript/js/index.js"></script>
+		<link rel="stylesheet" media="screen" type="text/css" href="{{MEDIA_ROOT}}/css/jquery-ui-1.8.2.custom.css"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="{{MEDIA_ROOT}}/css/common.css"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="{{MEDIA_ROOT}}/css/main.css"/>
+		<title>考试超市</title>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div class="logo">
+					<h1 class="text">考必过</h1>
+				</div>
+				<div class="nagviation">
+					<div class='item fleft login hidden'>登陆</div>
+					<div class='item fleft register'><a href='register.html'>注册</a></div>
+					<div class="item fleft user hidden">欢迎你,<a href='myInfo.html'>xing.lin</a></div>
+					<div class='item fleft exam'><a href='index.html'>首页</a></div>
+					<div class='item fleft exam'><a href='myPublish.html'>我发布的</a></div>
+					<div class="item fleft account"><a href='myAccount.html'>我的账户</a></div>
+					<div class="item fleft exit"><a href='logout'>退出系统</a></div>
+				</div>
+			</div><!-- end of header -->
+			<div id="content">
+				<div class='newMsg'>
+					<div class="msgContent"></div>
+				</div><!-- end of msg -->
+				<div class='publishExam'>
+					<div class='publishExamCase fleft'><div class='examCase'></div></div>
+					<input type="button" value="发布考试信息" class="button blue fright" />	
+				</div>
+				<div id='msgsContainer'>
+					<div class='options'>
+						<h4 class='title'>从结果中查询</h4>
+						<div class='content'>
+							<div class='fleft item offer'>
+								<input type='radio' name='offer' value='1' checked='checked' />供
+								<input type='radio' name='offer' value='0' />求
+							</div>
+							<div id='examDay' class='fleft item'>
+								考试时间：<input type='text' /><div id='calendar'></div>
+							</div>
+							<div class='examAddress fleft item'>
+								考试地点：<input type='text' />
+							</div>
+							<div class='examCourse fleft item'>
+								考试科目：<input type='text' />
+							</div>
+							<div class='search fleft item'>
+								<span class="button white">搜索</span>
+							</div>
+						</div>
+					</div><!-- end of options -->
+					<div class='msgsContent'></div><!-- end of content -->
+					<div class="nav" id="pagination">
+						<div class="pagniation"></div>
+						<div class="selectPagePer">
+							<select>
+								<option value="10" selected="selected">10</option>
+								<option value="15">15</option>
+								<option value="20">20</option>
+							</select>
+							<span>per page</span>
+						</div>
+					</div>
+				</div><!-- end of msgsContainer -->
+				<div id='providers'>
+					<div class='top-provider'>
+						<h4 class='title'>精英团队</h4>
+						<div class='providers-content'></div>
+					</div>
+					<div class='others-provider'></div>
+					<div id='teacherInfoDetails'>
+						<div class='content'></div>
+					</div>
+				</div><!-- end of customers -->
+				<div id='examElse'>
+					
+				</div><!-- end of examElse -->
+			</div><!-- end of content -->
+			<div id="footer">
+				<div id='footer-container'>
+					<a href='aboutUs.html'>关于我们</a> |
+					<a href='contactUs.html'>联系我们</a> |
+					<a href='help.html'>帮助信息</a> |
+					<a href='hr.html'>人才招聘</a>|
+					<a href='story.html'>考试的故事</a>
+				</div>
+			</div><!-- end of footer -->
+		</div>
+	</body>
 </html>

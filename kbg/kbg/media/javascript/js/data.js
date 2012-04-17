@@ -1,0 +1,345 @@
+/**
+ * @author {xing.lin@ymail.com}
+ */
+var data=[
+	{
+		"id":1,
+		"user_id":13421323,
+		"user_gender":1,
+		"user_name":"张三",
+		"user_images":"/userimg/13421323", //
+		"exam_type":1, //1--
+		"subject":"数学",
+		"audition":0, //
+		"uncoil":0, //
+		"exam_day":2012/1/3,
+		"exam_time":"09:00 am",
+		"exam_province":"江苏省",
+		"exam_city":"苏州市",
+		"exam_district":"工业园区",
+		"exam_street":"金鸡湖大道1355号D501",
+		"mobile_phone":13584801459,
+		"mobile_phone2":"",
+		"telephone":"0512-65121098",
+		"telephone2":"",
+		"salary":1200.00,
+		"read_count":14,
+		"last_date":2, //last time
+		"last_update_by":"xlin",
+		"last_update":"2011/12/12"
+	}
+];
+
+var publishData = [
+	{
+		'id':'10000001',
+		'user':'xlin',
+		'day':'2012/02/12',
+		'address':'浙江宁波',
+		'course':'会计电算化',
+		'pay':345
+	},
+	{
+		'id':'10000002',
+		'user':'zhansan',
+		'day':'2012/04/12',
+		'address':'甘肃兰州',
+		'course':'英语三级',
+		'pay':356
+	},
+	{
+		'id':'10000003',
+		'user':'gongsun',
+		'day':'2012/02/10',
+		'address':'上海黄浦区',
+		'course':'雅思',
+		'pay':4345
+	}
+];
+
+var providers=[
+{
+	'userId':10010001,
+	'userClass':1,
+	'userName':'xlin',
+	'userPhoto':'../images/photo/1.png',
+	'userGender':'m',
+	'userAddr':'江苏省盐城市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},
+{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},
+{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/1.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/1.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/1.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},{
+	'userId':10010002,
+	'userClass':2,
+	'userName':'wangwu',
+	'userPhoto':'../images/photo/3.png',
+	'userGender':'f',
+	'userAddr':'江西省宜春市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+},
+{
+	'userId':10010003,
+	'userClass':2,
+	'userName':'小熊',
+	'userPhoto':'../images/photo/2.png',
+	'userGender':'m',
+	'userAddr':'辽宁省大连市',
+	'userGoodness':['数学','物理','英语'],
+	'examScore':12,
+	'examExcellent':3,
+	'examWell':3
+}
+];
+
+var publishMsg =[
+{
+	'id':1,
+	'status':0,
+	'publishTime':'2012-02-12',
+	'examTime':'2012-02-03',
+	'publishInfo':'南京，一级建筑师',
+	'clickCount':12,
+	'clickUser':[1,2,3,4],
+	'winnerID':'',
+	'winnerName':'',
+	'scoreType':'',
+	'score':0
+},
+{
+	'id':2,
+	'status':1,
+	'publishTime':'2012-03-12',
+	'examTime':'2012-02-03',
+	'publishInfo':'南京，二级建筑师',
+	'clickCount':12,
+	'clickUser':[1,2,3,4],
+	'winnerID':'',
+	'winnerName':'',
+	'scoreType':'',
+	'score':0
+},
+{
+	'id':3,
+	'status':2,
+	'publishTime':'2012-04-12',
+	'examTime':'2012-02-03',
+	'publishInfo':'南京，三级建筑师',
+	'clickCount':12,
+	'clickUser':[1,2,3,4],
+	'winnerID':'1000001',
+	'winnerName':'xlin',
+	'scoreType':'',
+	'score':0
+},
+{
+	'id':4,
+	'status':3,
+	'publishTime':'2012-04-12',
+	'examTime':'2012-02-03',
+	'publishInfo':'镇江，三级建筑师',
+	'clickCount':12, //被查看次数
+	'clickUser':[1,2,3,4], //点击查看的人
+	'winnerID':'1000001', //此条考试采纳的人ID
+	'winnerName':'xlin', //此条考试采纳的人的名字
+	'scoreType':1, //考试分数的类型，1通过，0没通过
+	'score':89 //考试分数
+}
+];
+
+var enlist=[
+{
+	'id':10000001,
+	'status':0,
+	'builderID':10000002,
+	'builderName':'lioncin',
+	'publishTime':'2012-01-12',
+	'examTime':'2012-02-11',
+	'examAddr':'昆山',
+	'examInfo':'大学英语6级',
+	'myPrice':800
+},
+{
+	'id':10000002,
+	'status':0,
+	'builderID':10000002,
+	'builderName':'wangwang',
+	'publishTime':'2012-01-12',
+	'examTime':'2012-02-11',
+	'examAddr':'杭州',
+	'examInfo':'大学英语4级',
+	'myPrice':1800
+},
+{
+	'id':10000003,
+	'status':0,
+	'builderID':10000002,
+	'builderName':'ahua',
+	'publishTime':'2012-01-12',
+	'examTime':'2012-02-11',
+	'examAddr':'上海',
+	'examInfo':'雅思',
+	'myPrice':2800
+},
+{
+	'id':10000004,
+	'status':1,
+	'builderID':10000002,
+	'builderName':'mimi',
+	'publishTime':'2012-01-12',
+	'examTime':'2012-02-11',
+	'examAddr':'徐州',
+	'examInfo':'公务员',
+	'myPrice':8000
+}
+];
+
+window.accountInfo ={
+	"accountType":0, //0---普通用户；1---VIP用户；2---钻石用户
+	"accountBalance":0, //账户余额
+	"accountValidTime":"2012-12-31", //账户有效时间
+	"chargeRecords":[{
+		"chargeTime":"2011-12-31",
+		"chargeAccount":10
+	},{
+		"chargeTime":"2011-11-12",
+		"chargeAccount":10
+	}], //充值记录
+	"consumRecords":[
+		{
+			"infoId":"10010112",
+			"infoPrice":"1",
+			"time":"2011-01-12"
+		},{
+			"infoId":"10010113",
+			"infoPrice":"1",
+			"time":"2011-03-12"
+		}
+	] //消费记录
+};

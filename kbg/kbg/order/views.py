@@ -8,4 +8,5 @@ from kbg.order.forms import *
 
 def index(request):
     context = {}
+    context['MEDIA_URL'] = settings.MEDIA_URL
     return render_to_response('index.html', context)

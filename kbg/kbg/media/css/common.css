@@ -162,13 +162,13 @@ table th{ text-align:left;}
 .normail{ }
 .immediately{ }
 .slow{ }
-.up{ background:url(../images/bg_up.gif);}
-.down{ background:url(../images/bg_down.gif);}
+.up{ background:url({{MEDIA_URL}}/images/bg_up.gif);}
+.down{ background:url({{MEDIA_URL}}/images/bg_down.gif);}
 .start{ width:20px; height:20px;}
-.start1{ background:url(../images/donewell.png) no-repeat;}
-.start2{ background:url(../images/donegood.png) no-repeat;}
+.start1{ background:url({{MEDIA_URL}}/images/donewell.png) no-repeat;}
+.start2{ background:url({{MEDIA_URL}}/images/donegood.png) no-repeat;}
 
-#calendar{ width:16px; height:15px; background:url(../images/calendar.gif); display:inline-block;}
+#calendar{ width:16px; height:15px; background:url({{MEDIA_URL}}/images/calendar.gif); display:inline-block;}
 
 .infoTable{ border:1px solid #ccc; padding:0;}
 .infoTable tr{}

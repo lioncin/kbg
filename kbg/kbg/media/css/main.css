@@ -10,7 +10,7 @@
 #content .newMsg{ width:960px; padding:5px 0; margin:0 auto;}
 #content .newMsg .msgContent{ height:30px; line-height:30px; border:solid 1px #00B9C3; border-radius:10px;}
 #content .newMsg .msgContent .text{ margin:0 auto; padding-left:20px;}
-#content .newMsg .msgContent .close{ width:16px; height:16px; background:url(../images/icon_close.png); margin:10px;}
+#content .newMsg .msgContent .close{ width:16px; height:16px; background:url({{MEDIA_URL}}/images/icon_close.png); margin:10px;}
 #content .newMsg .msgContent a{ padding:0 5px; text-decoration:none; color:#E60012;}
 #content .publishExam{ width:960px; height:45px; margin:5px auto; border:solid 1px #00B9C3; border-radius:10px;}
 #content .publishExam .publishExamCase{ width:70%; height:42px; line-height:42px; overflow:hidden; text-align:center;}
@@ -51,8 +51,8 @@
 .myExamInfo table td .moreUser{ font-size:10px; text-decoration:underline; cursor:pointer;}
 .myExamInfo table td:hover,.myExamInfo table tr:hover{ background:#dbedfa; cursor:default;}
 #myPublishInfo .actionButton{ width:16px; height:16px; float:left; margin:0 2px; cursor:pointer;}
-#myPublishInfo .editButton{ background:url(../images/icon07.gif) no-repeat;}
-#myPublishInfo .delButtion{ background:url(../images/icon08.gif) no-repeat;}
+#myPublishInfo .editButton{ background:url({{MEDIA_URL}}/images/icon07.gif) no-repeat;}
+#myPublishInfo .delButtion{ background:url({{MEDIA_URL}}/images/icon08.gif) no-repeat;}
 #myAccept{ width:960px; margin:5px auto; border:1px solid #00B9C3; border-radius:5px;}
 
 /* my account page */

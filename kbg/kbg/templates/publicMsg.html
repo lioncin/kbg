@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="../javascript/jquery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="../javascript/jquery/jquery-ui-1.8.2.custom.min.js"></script>
+		<script type="text/javascript" src="../javascript/jquery/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../javascript/js/data.js"></script>
+		<script type="text/javascript" src="../javascript/js/common.js"></script>
+		<script type="text/javascript" src="../javascript/js/publishMsg.js"></script>
+		<link rel="stylesheet" media="screen" type="text/css" href="../css/jquery-ui-1.8.2.custom.css"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" media="screen" type="text/css" href="../css/main.css"/>
+		<title>考试超市</title>
+	</head>
+		<body>
+		<div id="main">
+			<div id="header">
+				<div class="logo">
+					<h1 class="text">考必过</h1>
+				</div>
+				<div class="nagviation">
+					<div class='item fleft login hidden'>登陆</div>
+					<div class='item fleft register hidden'>注册</div>
+					<div class="item fleft user">欢迎你,<a href='myInfo.html'>xing.lin</a></div>
+					<div class='item fleft exam'><a href='index.html'>首页</a></div>
+					<div class='item fleft exam'><a href='myPublish.html'>我发布的</a></div>
+					<div class="item fleft account"><a href='myAccount.html'>我的账户</a></div>
+					<div class="item fleft exit"><a href='logout'>退出系统</a></div>
+				</div>
+			</div><!-- end of header -->
+			<div id="content">
+				<div id='newOrder'>
+					<div class='orderContent'>
+						<div class='examDay item'>
+							<span class='title'>考试时间:</span>
+							<input id='exam_day' type='text' />
+							<div id='calendar'></div>
+							从<select id='timeFrom'>
+								<option value='8'>8:00</option>
+								<option value='9'>9:00</option>
+								<option value='10'>10:00</option>
+								<option value='11'>11:00</option>
+								<option value='12'>12:00</option>
+								<option value='13'>13:00</option>
+								<option value='14'>14:00</option>
+								<option value='15'>15:00</option>
+								<option value='16'>16:00</option>
+								<option value='17'>17:00</option>
+								<option value='18'>18:00</option>
+								<option value='19'>19:00</option>
+							</select>
+							<select id='secondFrom'>
+								<option value='0'>00</option>
+								<option value='15'>15</option>
+								<option value='30'>30</option>
+								<option value='45'>45</option>
+							</select>
+							到<select id='timeTo'>
+								<option value='8'>8:00</option>
+								<option value='9'>9:00</option>
+								<option value='10'>10:00</option>
+								<option value='11'>11:00</option>
+								<option value='12'>12:00</option>
+								<option value='13'>13:00</option>
+								<option value='14'>14:00</option>
+								<option value='15'>15:00</option>
+								<option value='16'>16:00</option>
+								<option value='17'>17:00</option>
+								<option value='18'>18:00</option>
+								<option value='19'>19:00</option>
+							</select>
+							<select id='secondTo'>
+								<option value='0'>00</option>
+								<option value='15'>15</option>
+								<option value='30'>30</option>
+								<option value='45'>45</option>
+							</select>
+						</div>
+						<div class='examAddress item'>
+							<span class='title'>考试地点:</span>
+							<input type='text' />
+							<div id='map'></div>
+						</div>
+						<div class='examCourse item'>
+							<span class='title'>考试科目:</span>
+							<input type='text' />
+							<div id='course'></div>
+						</div>
+						<div class='examPrice item'>
+							<span class='title'>考试报价:</span>
+							<div class='price'>
+								从<input type='text' value='100' />元&nbsp;
+								到<input type='text' value='1000' />元
+								面议:<input type='checkbox' onclick='valueConfirm(); return false;' />
+							</div>
+						</div><!-- end of info -->
+						<div class='otherInfo item'>
+							<div class='title'>更多信息<a class='more'>展开</a></div>
+							<div class='moreInfo hidden'>
+								<table class='infoTable' cellpadding='0' cellspacing='0'>
+									<tr>
+										<th width='180'><div class='title'>考试内容</div></th>
+										<td><textarea class='examDescribe'></textarea></td>
+									</tr>
+									<tr>
+										<th><div class='title'>是否口试</div></th>
+										<td><input type='radio' name='oral' value='y' />是
+												<input type='radio' name='oral' value='n' />否
+										</td>
+									</tr>
+									<tr>
+										<th><div class='title'>是否机试</div></th>
+										<td><input type='radio' name='machine' value='y' />是
+									<input type='radio' name='machine' value='n' />否</td>
+									</tr>
+									<tr>
+										<th><div class='title'>是否开卷</div></th>
+										<td><input type='radio' name='coll' value='y' />是
+									<input type='radio' name='coll' value='n' />否</td>
+									</tr>
+									<tr>
+										<th><div class='title'>是否有模拟试卷</div></th>
+										<td><input type='radio' name='imitate' value='y' />是
+									<input type='radio' name='imitate' value='n' />否</td>
+									</tr>
+								</table>
+							</div>
+						</div><!-- end of  other info -->
+						<div class='item examTeacher'>
+							<div class='title'>老师要求	<a class='more'>展开</a></div>
+							<div class='condition hidden'>
+								<table class=''>
+									<tr>
+										<td>老师类型：</td>
+										<td>
+											<select id='teacherType'>
+												<option value='1'>在校生</option>
+												<option value='2'>专业人士</option>
+												<option value='3'>老师</option>
+												<option value='4'>不限</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>地址范围</td>
+										<td>
+											<select id='teacherArea'>
+												<option value='1'>同市</option>
+												<option value='2'>同城</option>
+												<option value='3'>同省</option>
+												<option value='4'>不限</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>身型</td>
+										<td>
+											<select id='teacherBody'>
+												<option value='1'>苗条</option>
+												<option value='2'>一般</option>
+												<option value='3'>强壮</option>
+												<option value='4'>不限</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div><!-- end of condition -->
+						</div><!-- end of teacher -->
+						<div class='item examOtherConditions'>
+							<div class='title'>其他</div>
+						</div>
+					</div>
+					<div class='buttons'>
+						<div class="button gray submit"><span>提交</span></div>
+						<div class="button gray reset"><span>重置</span></div>
+					</div>
+				</div><!-- end of new order -->
+			</div><!-- end of content -->
+			<div id="footer">
+				<div id='footer-container'>
+					<a href='aboutUs.html'>关于我们</a> |
+					<a href='contactUs.html'>联系我们</a> |
+					<a href='help.html'>帮助信息</a> |
+					<a href='hr.html'>人才招聘</a>|
+					<a href='story.html'>考试的故事</a>
+				</div>
+			</div><!-- end of footer -->
+		</div>
+	</body>
+</html>

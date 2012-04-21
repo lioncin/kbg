@@ -126,7 +126,7 @@ function showTopTenProviders(){
 		html += '<div class="fleft user">';
 		html += '	<table id="'+ providers[i].userId +'">';
 		html += '		<tr><td rowspan="4">';
-		html += '			<img width="80px" src="' +providers[i].userPhoto+ '" />';
+		html += '			<img width="80px" src="/media/' +providers[i].userPhoto+ '" />';
 		html += '		</td><td>';
 		html += '			<div class="start start'+ providers[i].userClass +'"></div>';
 		html += '		</td></tr>';

@@ -4,7 +4,7 @@ from django.conf import settings
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-from kbg.order.views import index
+from kbg.order.views import *
 
 urlpatterns = patterns('order.views',
     # Examples:
@@ -17,6 +17,7 @@ urlpatterns = patterns('order.views',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^index/', 'index'),
+    url(r'AJAX/getPersonOrderInfo/$', 'getPersonOrderInfo'),
 )
 if settings.DEBUG:
     urlpatterns += patterns('',

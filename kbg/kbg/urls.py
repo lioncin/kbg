@@ -4,9 +4,8 @@ from django.conf import settings
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-from kbg.order.views import *
 
-urlpatterns = patterns('order.views',
+urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'kbg.views.home', name='home'),
     # url(r'^kbg/', include('kbg.foo.urls')),
@@ -16,8 +15,8 @@ urlpatterns = patterns('order.views',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/', 'index'),
-    url(r'AJAX/getPersonOrderInfo/$', 'getPersonOrderInfo'),
+    url(r'^$', 'kbg.login_main.views.index'),
+    url(r'^index/', 'kbg.order.views.index'),
 )
 if settings.DEBUG:
     urlpatterns += patterns('',

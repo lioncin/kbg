@@ -5,12 +5,14 @@ $(function(){
 
 //init person data
 function initPersonData(){
-	ajaxPersonDate();
+	//ajaxPersonDate();
 }
 
 //show person data
 function showPersonData(data){
-	
+	var html='';
+	html+='abc';
+	$('#showUserMsg').html(html);
 }
 
 //ajax request
@@ -22,7 +24,10 @@ function ajaxPersonDate(){
 			data:''
 		},
 		success:function(data, txtStatus){
-			showPersonData(data);
+			console.log(111)
+			if(txtStatus=='success'){
+				showPersonData(data);
+			}
 		},
 		error:function(){
 		}

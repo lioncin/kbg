@@ -13,9 +13,9 @@ def newOrder(request):
     context['MEDIA_URL'] = settings.MEDIA_URL
     if request.method == 'GET':
         form = OrderForm(request.GET)
+        context['form'] = form
     else:
         form = OrderForm(request.POST)
         if form.is_valid():
             form.save()
-    context['form'] = form
     return render_to_response('new_order.html', context)

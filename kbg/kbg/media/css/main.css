@@ -79,3 +79,4 @@
 
 #publish-new-order{ width:960px; margin:0 auto;}
 #publish-new-order .new-order-form{ }
+#publish-new-order .new-order-form p label{ display:inline-block; width:100px;}

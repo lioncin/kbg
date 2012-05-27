@@ -15,6 +15,7 @@ def newOrder(request):
         form = OrderForm(request.GET)
     else:
         form = OrderForm(request.POST)
-        
+        if form.is_valid():
+            form.save()
     context['form'] = form
     return render_to_response('new_order.html', context)

@@ -2,8 +2,12 @@
 {% block content %}
 <div id='publish-new-order'>
 	<h2>发布新的考试信息</h2>
-	<div class='new-order-form'>
+	<form class='new-order-form' action='.' method='POST'>
 		{{form.as_p}}
-	</div>
+		<div class='buttons'>
+			<input type='submit' value='确认' />
+			<input type='reset' value='重置' />
+		</div>
+	</form>
 </div>
 {% endblock %}

@@ -76,3 +76,6 @@
 #register .text{ float:left;}
 #register .text input{ margin-right:10px;}
 #register .tip{ float:left;}
+
+#publish-new-order{ width:960px; margin:0 auto;}
+#publish-new-order .new-order-form{ }

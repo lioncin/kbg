@@ -3,6 +3,7 @@ from django.forms import ModelForm
 
 from models import Order
 
-class OrderForm(forms.ModelForm):
-    class meta:
+class OrderForm(ModelForm):
+    class Meta:
         model = Order
+        fields = ('course_name', 'course_time', 'course_address', 'price', 'status',)

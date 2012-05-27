@@ -12,9 +12,9 @@ def newOrder(request):
     context['settings'] = settings
     context['MEDIA_URL'] = settings.MEDIA_URL
     if request.method == 'GET':
-        form = OrderForm(request['GET'])
+        form = OrderForm(request.GET)
     else:
-        form = OrderForm(request['POST'])
+        form = OrderForm(request.POST)
         
     context['form'] = form
     return render_to_response('new_order.html', context)

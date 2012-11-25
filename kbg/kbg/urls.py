@@ -19,6 +19,9 @@ urlpatterns = patterns('',
     url(r'^index/', 'kbg.order.views.index'),
     #add by xlin in 2012-5-25
     url(r'^newOrder/', 'kbg.order.views.newOrder'),
+    
+    #add by xlin in 20121126
+    url(r'^register/', 'kbg.register.urls'),
 )
 if settings.DEBUG:
     urlpatterns += patterns('',
